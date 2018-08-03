@@ -199,8 +199,8 @@ RES[,c(3,7,11)]<-format(round(RES[,c(3,7,11)],2),trim=T)
 RES[,c(4,8,12)]<-format(round(RES[,c(4,8,12)],1),trim=T)
 
 names(RES)<-c("MeanX","%Bias","SE","StdBias","MeanY","%Bias","SE","StdBias","RegCoeff","%Bias","SE","StdBias")
-RES<-cbind(DAG=c("Complete data","Trivial",rep("",1),"(a)",rep("",1),"(b)",rep("",1),"(c)",rep("",1),"(d)",rep("",1),"(e)",rep("",1),
-                 "(f)",rep("",1),"(g)",rep("",1),"(h)",rep("",1),"(i)",rep("",1),"(j)",rep("",1)),
+RES<-cbind(DAG=c("Complete data","Trivial",rep("",1),"A",rep("",1),"B",rep("",1),"C",rep("",1),"D",rep("",1),"E",rep("",1),
+                 "F",rep("",1),"G",rep("",1),"H",rep("",1),"I",rep("",1),"J",rep("",1)),
            Strategy=c("",rep(c("Complete case","MICE"),11)),RES)
 
 write.csv(RES, paste("RES_sim_",sce,".csv",sep=""))
